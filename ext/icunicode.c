@@ -44,7 +44,7 @@ static VALUE unicode_sort_key(VALUE string) {
 
   to_utf16(string, ustr, &ulen);
 
-  col = ucol_open("en_US", &status);
+  col = ucol_open("asjiasdjias", &status);
   if (U_SUCCESS(status)) {
     len = ucol_getSortKey(col, ustr, ulen, (uint8_t*)str, BUF_SIZE);
     ucol_close(col);
